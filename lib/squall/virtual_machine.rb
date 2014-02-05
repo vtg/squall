@@ -106,8 +106,7 @@ module Squall
     #
     # Returns a Hash.
     def edit(id, options = {})
-      response = request(:put, "/virtual_machines/#{id}.json", default_params(options))
-      response['virtual_machine']
+      request(:put, "/virtual_machines/#{id}.json", default_params(options))
     end
 
     # Public: Change the owner of a virtual machine.
