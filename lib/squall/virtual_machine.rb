@@ -81,8 +81,7 @@ module Squall
     #
     # Returns a Hash.
     def create(options = {})
-      response = request(:post, '/virtual_machines.json', default_params(options))
-      response['virtual_machine']
+      request(:post, '/virtual_machines.json', default_params(options))
     end
 
     # Public: Build a virtual machine.
